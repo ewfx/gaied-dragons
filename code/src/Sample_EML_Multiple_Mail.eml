@@ -1,0 +1,229 @@
+Delivered-To: genmailandrounting@gmail.com
+Received: by 2002:ad4:5f05:0:b0:6e8:8641:6c2f with SMTP id fo5csp1137536qvb;
+        Sat, 22 Mar 2025 10:55:54 -0700 (PDT)
+X-Received: by 2002:a17:907:bac2:b0:ac2:e059:dc03 with SMTP id a640c23a62f3a-ac3f26aee3dmr762766166b.38.1742666154077;
+        Sat, 22 Mar 2025 10:55:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742666154; cv=none;
+        d=google.com; s=arc-20240605;
+        b=AsOGf6i3GGc0omWzsctuZA0nKuCLYwsoTIDcJ8n/oyBSZEmL2QMLYWipIVREHcwDV7
+         Rleik4TsVEDXnGOiaHS/zH15B348eCDeLOzvqa9V65v46BMRU0uAN23xYRrFPqlR+st+
+         F6uf139NEFsAOlzbToBGY6tiG7GjRMzg2OEpSZsoP9d+BRpBFg2Nb77hRx1K2Px9aVSG
+         xer3U7Y+Urls9BCVfmnr1IXOE6pYpkFrXgoTWzyOYOQWNESVu6kyV9/iaQs4iVO20OCj
+         whfc6WWVZuj/l8Cie7EJVkE4Ra9esUk00G7ci3JHrmqYWZt+M7dxbKQ2N1hc/sSlVxKL
+         8Q1w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=EiHJXuxWJqvrJ3g4brnWx1mMx3EAy3VB0AZRIqTGcdw=;
+        fh=5HKf/u8pW+M4i7obq7BYao2fJ8sEd7bIjJdV6myJE80=;
+        b=A8jMEiLifUCZc1Qq0otICFrffeSzYSE98Vslq8+ODozBy1bITMJxxh3tiZBIho+5TA
+         cQQYQPPEodUf8v+Suag4we5oVrbd/2qh8G/8RfHf1oWUR7EAKSWCT4dqLS4t0dQBV6qw
+         yM7xH2y7I/UgAo8Knq5xbKShlBc8uzSrzNZpXvigEm6rbGInw4lkP79dDd6dKQ6l5l0T
+         B/v0FymlHDzJPNzMJweIi35UfhOI3JMXOvbh5M9OOJWO4SkArNtWR+A/2F5nqHWcXfgg
+         bfb2MVnlQxFyxxwtZKBKOtnApn121m4IIL/vPIYL3gx5Fba4J3fUzO0HSXo1ICboMt2A
+         q+Fw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=eHTNwOaa;
+       spf=pass (google.com: domain of rishiprasad543@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=rishiprasad543@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <rishiprasad543@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-ac3efaa8eb9sor183556566b.9.2025.03.22.10.55.53
+        for <genmailandrounting@gmail.com>
+        (Google Transport Security);
+        Sat, 22 Mar 2025 10:55:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of rishiprasad543@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=eHTNwOaa;
+       spf=pass (google.com: domain of rishiprasad543@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=rishiprasad543@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742666153; x=1743270953; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=EiHJXuxWJqvrJ3g4brnWx1mMx3EAy3VB0AZRIqTGcdw=;
+        b=eHTNwOaa4E/P1GHi6GU8PGn0M2bbYOCotAgWQ2b2c8zqUtNxQo9fcJ45nyZU+cL0AC
+         Y5CVKXj2U3fOgvakeqWPnuT+ykhNDXZR9DEuusTMFCeJNzVqkQuRc2i8EXHrIvv/FlKh
+         joJLvcCrIXssTslWHkKljywH12GzO7m/5lUzj5VwalvG0Xytuc7gkYHcyEAnJzlIbyNW
+         PI9NtnmKyqzyE5hPSzNGYsJiAJrghgxdiTmakp6FpX8d9xJy/DBhlqzBw1h47/SBPnA/
+         f2DqcA3r98tE0kwXX05jG1OOQz2GofQwblPSMky+re7xaRbfajde75DKnO0FTQ2ubl+O
+         oikw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742666153; x=1743270953;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=EiHJXuxWJqvrJ3g4brnWx1mMx3EAy3VB0AZRIqTGcdw=;
+        b=OQTNSkCwwJdcLPMW7dl1+wjjUOCIOQtINaxblc577UQtB+8DYsDkyr4JYfln3iAm5i
+         IALpBH0svJxNNUlWwYwLh8s1O+by6/tzmsHaUTt0Se2NBUg/4FQgYJzsC3Nv3wZukXXf
+         x8DzODel8xuBGXf7sImgjt6L52v7jd+3zMSEm3K7Q8FC300puKVJOwbExtLrSeh54QZz
+         dIOxxCmqFTg7faXLwNlyOMz+4pKWSeY/Sg6IBII/R4GnDX0GJtHLKP0hY9bhfb/sPHxS
+         GabGP4TLpoBXyo+RKg0Kcj+Dd0eHyQoHW0o/FhEtdoDrgMQFzl1CixT8cWL/gT6f9ISv
+         7Tug==
+X-Gm-Message-State: AOJu0Yx+CHlaexL6Mz2F7uOJqabV27qvhckDfOzvMTFK5CEXO8ej8ZHt
+	XlPM8YBTnO4oDegF1gPbeLmTiNjAEdmdhlt6I88kCxXdPaibI0yl+vVh7xtqXyK8OR9r/HmoG66
+	UObgD1+43Skl8fncCiZtGwsNyhuURhKxWDLs=
+X-Gm-Gg: ASbGncu1XFIhC4G2rSrIa/bmpnwZMBzxQGWejI81tU2YqJ357XmgwSgDWS7GYRj/J2H
+	mSVwVPnBp6SmUNBe74MCpMqK7iHpUMPfHOQfqpr2x7ggkyqadtgyhdiyPK/J7cujWWAjOL/DdBv
+	Jdvw6WnBoaRtOPHAu8rjxOPfYdGVjEL2BdFDMeHLqBq/6p2o+5hVIGvn1NsA==
+X-Google-Smtp-Source: AGHT+IGp78ak4EpNQ0TOp9+wxa5qZ8sI6HxXWW/xArPl/Uffi/n0s2kTkLE/gtMecrpqUKiv6emYjp4T7hF5jxc6QXc=
+X-Received: by 2002:a05:6402:3549:b0:5eb:c90f:86ae with SMTP id
+ 4fb4d7f45d1cf-5ebcd40aa88mr6981909a12.7.1742666152624; Sat, 22 Mar 2025
+ 10:55:52 -0700 (PDT)
+MIME-Version: 1.0
+References: <CANe9W21tNBfDdutrciBNX=pUoSbctLK436xHb0CEw9DyHReaig@mail.gmail.com>
+ <CAAkBqRqno8+NCUp33Oh7Gg5Cn6_ki_qmWw=5z22FToK2EP3R1Q@mail.gmail.com>
+In-Reply-To: <CAAkBqRqno8+NCUp33Oh7Gg5Cn6_ki_qmWw=5z22FToK2EP3R1Q@mail.gmail.com>
+From: Rishi Prasad <rishiprasad543@gmail.com>
+Date: Sat, 22 Mar 2025 23:25:40 +0530
+X-Gm-Features: AQ5f1JqSyGmZfhtz8Hds0eJddZfZBEmY-q39wOGYII_DGqWxAglOOMXo82NCoFU
+Message-ID: <CANe9W20qRt_ynB6EpF9=M-9U_kC+9cvAfsw4YDL+cKN9gL0uvA@mail.gmail.com>
+Subject: Re: Urgent: Unauthorized Transaction on My Account
+To: Rishi <genmailandrounting@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000fd4e430630f214e3"
+
+--000000000000fd4e430630f214e3
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear ABC International Bank Support Team,
+
+I am following up on my report regarding the unauthorized transaction of
+$5,000 USD on March 18, 2025, from my account (Account Number: 1234567890).
+
+Could you please provide an update on the investigation? I would appreciate
+any information regarding the progress or any further steps I need to take.
+
+Please feel free to contact me at +1 (123) 456-7890 or johndoe@example.com.
+
+Thank you for your assistance.
+
+Sincerely,
+
+John Doe
+
+123 Maple Street
+
+Cityville, Countryland
+
++1 (123) 456-7890
+
+johndoe@example.com
+
+
+On Sat, Mar 22, 2025 at 11:24=E2=80=AFPM Rishi <genmailandrounting@gmail.co=
+m> wrote:
+
+> Hi John,
+>
+> Sorry for the inconvenience and we have raised your concern with a
+> specific team. We are working on high priority for your issue.
+>
+> Thanks,
+> ABC support team
+>
+> On Sat, Mar 22, 2025 at 11:08=E2=80=AFPM Rishi Prasad <rishiprasad543@gma=
+il.com>
+> wrote:
+>
+>> Dear ABC International Bank Support Team,
+>>
+>> I am writing to report an unauthorized transaction on my account. I
+>> recently discovered that my account with ABC International Bank, associa=
+ted
+>> with the name John Doe, has been compromised. An amount has been debited
+>> without my authorization.
+>>
+>> Details of the account are as follows:
+>>
+>>    -
+>>
+>>    Account Holder Name: John Doe
+>>    -
+>>
+>>    Account Number: 1234567890
+>>    -
+>>
+>>    Date of Transaction: March 18, 2025
+>>    -
+>>
+>>    Amount Debited: $5,000 USD
+>>
+>> I kindly request your immediate assistance in investigating this matter
+>> and taking necessary actions to secure my account. Additionally, I would
+>> appreciate it if you could provide any supporting evidence or verificati=
+on
+>> that may assist in identifying the unauthorized activity. Enclosed with
+>> this email is a verification letter dated March 19, 2025, issued by your
+>> bank, confirming my account details and available balance.
+>>
+>> Please treat this matter as urgent. For any further clarification, feel
+>> free to contact me at +1 (123) 456-7890 or johndoe@example.com.
+>>
+>> Thank you for your prompt support.
+>>
+>> Sincerely,
+>>
+>> John Doe
+>>
+>> 123 Maple Street Cityville,
+>>
+>> Countryland
+>>
+>> +1 (123) 456-7890
+>>
+>> johndoe@example.com
+>>
+>
+
+--000000000000fd4e430630f214e3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><p>Dear ABC International Bank Support Team,</p><p>I am fo=
+llowing up on my report regarding the unauthorized transaction of $5,000 US=
+D on March 18, 2025, from my account (Account Number: 1234567890).</p><p>Co=
+uld you please provide an update on the investigation? I would appreciate a=
+ny information regarding the progress or any further steps I need to take.<=
+/p><p>Please feel free to contact me at +1 (123) 456-7890 or <a disabled>jo=
+hndoe@example.com</a>.</p><p>Thank you for your assistance.</p><p>Sincerely=
+,</p><p>John Doe</p><p>123 Maple Street</p><p>Cityville, Countryland</p><p>=
++1 (123) 456-7890</p><p><a disabled>johndoe@example.com</a></p><p></p></div=
+><br><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" clas=
+s=3D"gmail_attr">On Sat, Mar 22, 2025 at 11:24=E2=80=AFPM Rishi &lt;<a href=
+=3D"mailto:genmailandrounting@gmail.com">genmailandrounting@gmail.com</a>&g=
+t; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0p=
+x 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div d=
+ir=3D"ltr">Hi John,<div><br></div><div>Sorry for the inconvenience and we h=
+ave=C2=A0raised your concern with a specific team. We are working on high p=
+riority for your issue.</div><div><br></div><div>Thanks,</div><div>ABC supp=
+ort team</div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=
+=3D"gmail_attr">On Sat, Mar 22, 2025 at 11:08=E2=80=AFPM Rishi Prasad &lt;<=
+a href=3D"mailto:rishiprasad543@gmail.com" target=3D"_blank">rishiprasad543=
+@gmail.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=
+=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding=
+-left:1ex"><div dir=3D"ltr"><p>Dear ABC International Bank Support Team,</p=
+><p>I am writing to report an unauthorized transaction on my account. I rec=
+ently discovered that my account with ABC International Bank, associated wi=
+th the name John Doe, has been compromised. An amount has been debited with=
+out my authorization.</p><p>Details of the account are as follows:</p><ul><=
+li><p>Account Holder Name: John Doe</p></li><li><p>Account Number: 12345678=
+90</p></li><li><p>Date of Transaction: March 18, 2025</p></li><li><p>Amount=
+ Debited: $5,000 USD</p></li></ul><p>I kindly request your immediate assist=
+ance in investigating this matter and taking necessary actions to secure my=
+ account. Additionally, I would appreciate it if you could provide any supp=
+orting evidence or verification that may assist in identifying the unauthor=
+ized activity. Enclosed with this email is a verification letter dated Marc=
+h 19, 2025, issued by your bank, confirming my account details and availabl=
+e balance.</p><p>Please treat this matter as urgent. For any further clarif=
+ication, feel free to contact me at +1 (123) 456-7890 or <a disabled>johndo=
+e@example.com</a>.</p><p>Thank you for your prompt support.</p><p>Sincerely=
+,</p><p>John Doe=C2=A0</p><p>123 Maple Street
+Cityville,=C2=A0</p><p>Countryland=C2=A0</p><p>+1 (123) 456-7890=C2=A0</p><=
+p><a disabled>johndoe@example.com</a></p></div>
+</blockquote></div>
+</blockquote></div>
+
+--000000000000fd4e430630f214e3--
